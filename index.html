@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نویز کالکشنز و دووا | دست‌ساز در تبریز</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&family=Vazirmatn:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Glassmorphism Header -->
+  <header class="glass-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="https://i.ibb.co/V05cSVnC/logo1.png" alt="لوگو">
+      </a>
+      <nav class="nav-desktop">
+        <a href="index.html" class="active" data-fa="خانه" data-en="Home">خانه</a>
+        <a href="products-noise.html" data-fa="نویز کالکشنز" data-en="Noise Collections">نویز کالکشنز</a>
+        <a href="products-dova.html" data-fa="دووا" data-en="Dova">دووا</a>
+        <a href="about.html" data-fa="درباره" data-en="About">درباره</a>
+        <a href="contact.html" data-fa="تماس" data-en="Contact">تماس</a>
+        <button class="lang-toggle" onclick="toggleLang()">English</button>
+      </nav>
+      <button class="mobile-menu-btn" aria-label="تغییر منو">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile">
+      <a href="index.html" data-fa="خانه" data-en="Home">خانه</a>
+      <a href="products-noise.html" data-fa="نویز کالکشنز" data-en="Noise Collections">نویز کالکشنز</a>
+      <a href="products-dova.html" data-fa="دووا" data-en="Dova">دووا</a>
+      <a href="about.html" data-fa="درباره" data-en="About">درباره</a>
+      <a href="contact.html" data-fa="تماس" data-en="Contact">تماس</a>
+      <button class="lang-toggle" onclick="toggleLang()" style="width: 100%; margin-top: 1rem;">English</button>
+    </nav>
+  </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image" style="background-image: url('https://i.ibb.co/spzPm5D5/featured1.png');"></div>
+    <div class="hero-content">
+      <h1 data-fa="دست‌ساز با علاقه در تبریز" data-en="Handmade with care in Tabriz">دست‌ساز با علاقه در تبریز</h1>
+      <p><a href="#products" data-fa="مجموعه‌ها را ببینید →" data-en="Explore our collections →">مجموعه‌ها را ببینید →</a></p>
+    </div>
+  </section>
+  <!-- Featured Collections -->
+  <section id="products" class="featured-collections">
+    <div class="container">
+      <div class="collection-grid">
+        <div class="collection-card">
+          <h2 data-fa="نویز کالکشنز" data-en="Noise Collections">نویز کالکشنز</h2>
+          <p data-fa="جاکلیدی چرمی و جامدادی پارچه‌ای دست‌ساز" data-en="Handmade leather key holders & fabric pencil cases">جاکلیدی چرمی و جامدادی پارچه‌ای دست‌ساز</p>
+          <a href="products-noise.html" class="btn">مشاهده مجموعه</a>
+        </div>
+        <div class="collection-card">
+          <h2 data-fa="دووا" data-en="Dova">دووا</h2>
+          <p data-fa="کیف‌های دست‌دوز و جعبه‌های پارچه‌ای" data-en="Hand-stitched fabric handbags & pouches">کیف‌های دست‌دوز و جعبه‌های پارچه‌ای</p>
+          <a href="products-dova.html" class="btn">مشاهده مجموعه</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="glass-footer">
+    <div class="container">
+      <p data-fa="© ۱۴۰۴ نویز کالکشنز و دووا. دست‌ساز در تبریز." data-en="© 2025 Noise Collections & Dova. Handmade in Tabriz.">© ۱۴۰۴ نویز کالکشنز و دووا. دست‌ساز در تبریز.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
