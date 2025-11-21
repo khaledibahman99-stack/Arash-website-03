@@ -8,6 +8,41 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&family=Vazirmatn:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    function toggleLang() {
+      const html = document.documentElement;
+      if (html.lang === 'fa') {
+        html.lang = 'en';
+        html.dir = 'ltr';
+        document.querySelector('.lang-toggle').textContent = 'فارسی';
+        document.querySelectorAll('[data-en]').forEach(el => {
+          el.textContent = el.getAttribute('data-en');
+        });
+      } else {
+        html.lang = 'fa';
+        html.dir = 'rtl';
+        document.querySelector('.lang-toggle').textContent = 'English';
+        document.querySelectorAll('[data-fa]').forEach(el => {
+          el.textContent = el.getAttribute('data-fa');
+        });
+      }
+    }
+  </script>
+  <style>
+    .lang-toggle {
+      background: none;
+      border: none;
+      color: #2a2a2a;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .lang-toggle:hover {
+      background: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
   <!-- Glassmorphism Header -->
@@ -39,33 +74,37 @@
       <button class="lang-toggle" onclick="toggleLang()" style="width: 100%; margin-top: 1rem;">English</button>
     </nav>
   </header>
+
   <!-- About Section -->
   <section class="about-section">
     <div class="container">
       <h1 data-fa="درباره سازندگان" data-en="About the Makers">درباره سازندگان</h1>
       <p class="intro" data-fa="نویز کالکشنز و دووا دو برند خواهر هستند که از دستان و قلب دو سازنده در تبریز متولد شده‌اند." data-en="Noise Collections and Dova are two sister brands, born from the hands and hearts of two makers in Tabriz.">نویز کالکشنز و دووا دو برند خواهر هستند که از دستان و قلب دو سازنده در تبریز متولد شده‌اند.</p>
+      
       <div class="maker-profile">
         <div class="maker-image">
           <img src="https://i.ibb.co/rf79LfML/about1.png" alt="آرش خاوری">
         </div>
         <div class="maker-info">
-ش خاوری – طراح صنعتی (نویز کالکشنز)" data-en="Arash Khavari – Industrial Designer (Noise Collections)">آرش خاوری – طراح صنعتی (نویز کالکشنز)</h2>
-          <p data-fa="آرش فارغ‌التحصیل طراحی صنعتی از دانشگاه هنر تبریز است و کارگاهش را در کارگاه شماره ۲۶ همین دانشگاه اداره می‌کند. او با عشق عمیق به متریال‌ها و صنعت دستی، اشیای کاربردی — از جامدادی‌های پارچه‌ای تا جاکلیدی‌های چرمی — را تحت برند نویز کالکشنز طراحی و دست‌ساز می‌کند. کارهای او آرام، دقیق و ریشه‌دار در کاربرد روزمره هستند." data-en="Arash is a graduate of Industrial Design from Tabriz University of Art, where he also runs his workshop (No. 26). With a deep love for materials and craftsmanship, he designs and hand-makes functional objects — from fabric pencil cases to leather key holders — under the brand Noise Collections. His work is quiet, precise, and rooted in everyday utility.">آرش فارغ‌التحصیل طراحی صنعتی از دانشگاه هنر تبریز است و کارگاهش را در کارگاه شماره ۲۶ همین دانشگاه اداره می‌کند. او با عشق عمیق به متریال‌ها و صنعت دستی، اشیای کاربردی — از جامدادی‌های پارچه‌ای تا جاکلیدی‌های چرمی — را تحت برند نویز کالکشنز طراحی و دست‌ساز می‌کند. کارهای او آرام، دقیق و ریشه‌دار در کاربرد روزمره هستند.</p>
+      <h2 data-fa="آرش خاوری – طراح صنعتی (نویز کالکشنز)" data-en="Arash Khavari – Industrial Designer (Noise Collections)">آرش خاوری – طراح صنعتی (نویز کالکشنز)</h2>
+          <p data-fa="آرش فارغ‌التحصیل طراحی صنعتی از دانشگاه هنر تبریز است و کارگاهش را در کارگاه شماره ۲۶ همین دانشگاه اداره می‌کند. او با عشق عمیق به متریال‌ها و صنعت دستی، اشیای کاربردی — از جامدادی‌های پارچه‌ای تا جاکلیدی‌های — را تحت برند نویز کالکشنز طراحی و دست‌ساز می‌کند. کارهای او آرام، دقیق و ریشه‌دار در کاربرد روزمره هستند." data-en="Arash is a graduate of Industrial Design from Tabriz University of Art, where he also runs his workshop (No. 26). With a deep love for materials and craftsmanship, he designs and hand-makes functional objects — from fabric pencil cases to leather key holders — under the brand Noise Collections. His work is quiet, precise, and rooted in everyday utility.">آرش فارغ‌التحصیل طراحی صنعتی از دانشگاه هنر تبریز است و کارگاهش را در کارگاه شماره ۲۶ همین دانشگاه اداره می‌کند. او با عشق عمیق به متریال‌ها و صنعت دستی، اشیای کاربردی — از جامدادی‌های پارچه‌ای تا جاکلیدی‌های چرمی — را تحت برند نویز کالکشنز طراحی و دست‌ساز می‌کند. کارهای او آرام، دقیق و ریشه‌دار در کاربرد روزمره هستند.</p>
           <blockquote data-fa="«هر خیاطی یک تصمیم است. هر محصول، یک داستان.»" data-en="&ldquo;Every stitch is a decision. Every product, a story.&rdquo;">«هر خیاطی یک تصمیم است. هر محصول، یک داستان.»</blockquote>
         </div>
       </div>
+
       <div class="maker-profile reverse">
         <div class="maker-image">
           <img src="https://i.ibb.co/fd5525BH/about-2.png" alt="خاطره خادم">
         </div>
         <div class="maker-info">
 خاطره خادم – مرمت‌گر آثار تاریخی (دووا)" data-en="Khatereh Khadem – Conservator of Historical Artifacts (Dova)">خاطره خادم – مرمت‌گر آثار تاریخی (دووا)</h2>
-          <p data-fa="خاطره مدرک کارشناسی مرمت آثار تاریخی دارد و چشم‌اندازش به جزئیات و بافت‌ها به زیبایی در کیف‌های دست‌سازش تحت برند دووا تجلی می‌یابد. هر کیف — از جعبه‌های لبه‌دار تا کیف‌های ساختاریافته — با دقت و با پارچه‌های بادوامی مانند ترگال و تترون دوخته می‌شود. طراحی‌های او نرم، زنانه و فراموش‌نشدنی هستند." data-en="Khatereh holds a degree in Conservation of Historical Artifacts, and her eye for detail and texture translates beautifully into her handmade bags under the brand Dova. Each bag — from ruffled pouches to structured totes — is sewn with care, using durable fabrics like Teragal and Tetrone. Her designs are soft, feminine, and timeless.">خاطره مدرک کارشناسی مرمت آثار تاریخی دارد و چشم‌اندازش به جزئیات و بافت‌ها به زیبایی در کیف‌های دست‌سازش تحت برند دووا تجلی می‌یابد. هر کیف — از جعبه‌های لبه‌دار تا کیف‌های ساختاریافته — با دقت و با پارچه‌های بادوامی مانند ترگال و تترون دوخته می‌شود. طراحی‌های او نرم، زنانه و فراموش‌نشدنی هستند.</p>
+          <p data-fa="خاطره مدرک کارشناسی مرمت آثار تاریخی دارد و چشم‌‌اندازش به جزئیات و بافت‌ها به زیبایی در کیف‌های دست‌سازش تحت برند دووا تجلی می‌یابد. هر کیف — از جعبه‌های لبه‌دار تا کیف‌های ساختاریافته — با دقت و با پارچه‌های بادوامی مانند ترگال و تترون دوخته می‌شود. طراحی‌های او نرم، زنانه و فراموش‌نشدنی هستند." data-en="Khatereh holds a degree in Conservation of Historical Artifacts, and her eye for detail and texture translates beautifully into her handmade bags under the brand Dova. Each bag — from ruffled pouches to structured totes — is sewn with care, using durable fabrics like Teragal and Tetrone. Her designs are soft, feminine, and timeless.">خاطره مدرک کارشناسی مرمت آثار تاریخی دارد و چشم‌‌اندازش به جزئیات و بافت‌ها به زیبایی در کیف‌های دست‌سازش تحت برند دووا تجلی می‌یابد. هر کیف — از جعبه‌های لبه‌دار تا کیف‌های ساختاریافته — با دقت و با پارچه‌های بادوامی مانند ترگال و تترون دوخته می‌شود. طراحی‌های او نرم، زنانه و فراموش‌نشدنی هستند.</p>
 یبایی را حفظ می‌کنم — نه فقط در تاریخ، بلکه در استفاده روزمره.»" data-en="&ldquo;Stitch by stitch, I preserve beauty — not just in history, but in daily use.&rdquo;">«خیاطی به خیاطی، زیبایی را حفظ می‌کنم — نه فقط در تاریخ، بلکه در استفاده روزمره.»</blockquote>
         </div>
       </div>
     </div>
   </section>
+
   <!-- Footer -->
   <footer class="glass-footer">
     <div class="container">
