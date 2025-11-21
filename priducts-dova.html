@@ -8,6 +8,41 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&family=Vazirmatn:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    function toggleLang() {
+      const html = document.documentElement;
+      if (html.lang === 'fa') {
+        html.lang = 'en';
+        html.dir = 'ltr';
+        document.querySelector('.lang-toggle').textContent = 'فارسی';
+        document.querySelectorAll('[data-en]').forEach(el => {
+          el.textContent = el.getAttribute('data-en');
+        });
+      } else {
+        html.lang = 'fa';
+        html.dir = 'rtl';
+        document.querySelector('.lang-toggle').textContent = 'English';
+        document.querySelectorAll('[data-fa]').forEach(el => {
+          el.textContent = el.getAttribute('data-fa');
+        });
+      }
+    }
+  </script>
+  <style>
+    .lang-toggle {
+      background: none;
+      border: none;
+      color: #2a2a2a;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .lang-toggle:hover {
+      background: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
   <!-- Glassmorphism Header -->
@@ -39,10 +74,12 @@
       <button class="lang-toggle" onclick="toggleLang()" style="width: 100%; margin-top: 1rem;">English</button>
     </nav>
   </header>
+
   <!-- Products Section -->
   <section class="products-section">
     <div class="container">
       <h1 data-fa="دووا" data-en="Dova">دووا</h1>
+
       <h2 class="section-title" data-fa="جعبه‌های دست‌دوز" data-en="Hand Stitched Pouches">جعبه‌های دست‌دوز</h2>
       <div class="products-grid">
         <!-- Pouch 1 - Pink -->
@@ -60,6 +97,7 @@
             <a href="https://wa.me/989918681838" class="btn" target="_blank" rel="noopener" data-fa="سفارش از طریق تماس" data-en="Contact to Order">سفارش از طریق تماس</a>
           </div>
         </div>
+
         <!-- Pouch 2 - Black -->
         <div class="product-card fade-in">
           <div class="product-image">
@@ -75,6 +113,7 @@
             <a href="https://wa.me/989918681838" class="btn" target="_blank" rel="noopener" data-fa="سفارش از طریق تماس" data-en="Contact to Order">سفارش از طریق تماس</a>
           </div>
         </div>
+
         <!-- Pouch 3 - Blue -->
         <div class="product-card fade-in">
           <div class="product-image">
@@ -90,6 +129,7 @@
             <a href="https://wa.me/989918681838" class="btn" target="_blank" rel="noopener" data-fa="سفارش از طریق تماس" data-en="Contact to Order">سفارش از طریق تماس</a>
           </div>
         </div>
+
         <!-- Pouch 4 - Red -->
         <div class="product-card fade-in">
           <div class="product-image">
@@ -106,6 +146,7 @@
           </div>
         </div>
       </div>
+
       <h2 class="section-title" data-fa="کیف‌های دستی" data-en="Handbags">کیف‌های دستی</h2>
       <div class="products-grid">
         <!-- Handbag 1 - Gray -->
@@ -123,6 +164,7 @@
             <a href="https://wa.me/989918681838" class="btn" target="_blank" rel="noopener" data-fa="سفارش از طریق تماس" data-en="Contact to Order">سفارش از طریق تماس</a>
           </div>
         </div>
+
         <!-- Handbag 2 - Pink -->
         <div class="product-card fade-in">
           <div class="product-image">
@@ -138,6 +180,7 @@
             <a href="https://wa.me/989918681838" class="btn" target="_blank" rel="noopener" data-fa="سفارش از طریق تماس" data-en="Contact to Order">سفارش از طریق تماس</a>
           </div>
         </div>
+
         <!-- Handbag 3 - Blue -->
         <div class="product-card fade-in">
           <div class="product-image">
@@ -153,6 +196,7 @@
             <a href="https://wa.me/989918681838" class="btn" target="_blank" rel="noopener" data-fa="سفارش از طریق تماس" data-en="Contact to Order">سفارش از طریق تماس</a>
           </div>
         </div>
+
         <!-- Handbag 4 - Navy -->
         <div class="product-card fade-in">
           <div class="product-image">
@@ -171,6 +215,7 @@
       </div>
     </div>
   </section>
+
   <!-- Footer -->
   <footer class="glass-footer">
     <div class="container">
