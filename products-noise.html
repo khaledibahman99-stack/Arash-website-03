@@ -3,11 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>نویز کالکشنز | محصولات</title>
+  <title>نویس کالکشنز | محصولات</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&family=Vazirmatn:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    function toggleLang() {
+      const html = document.documentElement;
+      if (html.lang === 'fa') {
+        html.lang = 'en';
+        html.dir = 'ltr';
+        document.querySelector('.lang-toggle').textContent = 'فارسی';
+        document.querySelectorAll('[data-en]').forEach(el => {
+          el.textContent = el.getAttribute('data-en');
+        });
+      } else {
+        html.lang = 'fa';
+        html.dir = 'rtl';
+        document.querySelector('.lang-toggle').textContent = 'English';
+        document.querySelectorAll('[data-fa]').forEach(el => {
+          el.textContent = el.getAttribute('data-fa');
+        });
+      }
+    }
+  </script>
+  <style>
+    .lang-toggle {
+      background: none;
+      border: none;
+      color: #2a2a2a;
+      font-weight: 500;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .lang-toggle:hover {
+      background: #f0f0f0;
+    }
+  </style>
 </head>
 <body>
   <!-- Glassmorphism Header -->
@@ -18,7 +53,7 @@
       </a>
       <nav class="nav-desktop">
         <a href="index.html" data-fa="خانه" data-en="Home">خانه</a>
-        <a href="products-noise.html" class="active" data-fa="نویز کالکشنز" data-en="Noise Collections">نویز کالکشنز</a>
+        <a href="products-noise.html" class="active" data-fa="نویس کالکشنز" data-en="Noise Collections">نویس کالکشنز</a>
         <a href="products-dova.html" data-fa="دووا" data-en="Dova">دووا</a>
         <a href="about.html" data-fa="درباره" data-en="About">درباره</a>
         <a href="contact.html" data-fa="تماس" data-en="Contact">تماس</a>
@@ -32,17 +67,19 @@
     </div>
     <nav class="nav-mobile">
       <a href="index.html" data-fa="خانه" data-en="Home">خانه</a>
-      <a href="products-noise.html" data-fa="نویز کالکشنز" data-en="Noise Collections">نویز کالکشنز</a>
+      <a href="products-noise.html" data-fa="نویس کالکشنز" data-en="Noise Collections">نویس کالکشنز</a>
       <a href="products-dova.html" data-fa="دووا" data-en="Dova">دووا</a>
       <a href="about.html" data-fa="درباره" data-en="About">درباره</a>
       <a href="contact.html" data-fa="تماس" data-en="Contact">تماس</a>
       <button class="lang-toggle" onclick="toggleLang()" style="width: 100%; margin-top: 1rem;">English</button>
     </nav>
   </header>
+
   <!-- Products Section -->
   <section class="products-section">
     <div class="container">
-      <h1 data-fa="نویز کالکشنز" data-en="Noise Collections">نویز کالکشنز</h1>
+      <h1 data-fa="نویس کالکشنز" data-en="Noise Collections">نویس کالکشنز</h1>
+
       <h2 class="section-title" data-fa="جامدادی‌های پارچه‌ای" data-en="Fabric Pencil Cases">جامدادی‌های پارچه‌ای</h2>
       <div class="products-grid">
         <!-- Pencil Case 1 - Green -->
@@ -60,6 +97,7 @@
             <a href="https://wa.me/989918681838" class="btn" target="_blank" rel="noopener" data-fa="سفارش از طریق تماس" data-en="Contact to Order">سفارش از طریق تماس</a>
           </div>
         </div>
+
         <!-- Pencil Case 2 - Black -->
         <div class="product-card fade-in">
           <div class="product-image">
@@ -76,6 +114,7 @@
           </div>
         </div>
       </div>
+
       <h2 class="section-title" data-fa="جاکلیدی‌های چرمی" data-en="Leather Key Holders">جاکلیدی‌های چرمی</h2>
       <div class="products-grid">
         <!-- Key Holder 1 - Blue -->
@@ -93,6 +132,7 @@
             <a href="https://wa.me/989918681838" class="btn" target="_blank" rel="noopener" data-fa="سفارش از طریق تماس" data-en="Contact to Order">سفارش از طریق تماس</a>
           </div>
         </div>
+
         <!-- Key Holder 2 - Red -->
         <div class="product-card fade-in">
           <div class="product-image">
@@ -111,6 +151,7 @@
       </div>
     </div>
   </section>
+
   <!-- Footer -->
   <footer class="glass-footer">
     <div class="container">
@@ -126,7 +167,7 @@
           </svg>
         </a>
       </div>
-      <p data-fa="© ۱۴۰۴ نویز کالکشنز و دووا. دست‌ساز در تبریز." data-en="© 2025 Noise Collections & Dova. Handmade in Tabriz.">© ۱۴۰۴ نویز کالکشنز و دووا. دست‌ساز در تبریز.</p>
+      <p data-fa="© ۱۴۰۴ نویس کالکشنز و دووا. دست‌ساز در تبریز." data-en="© 2025 Noise Collections & Dova. Handmade in Tabriz.">© ۱۴۰۴ نویس کالکشنز و دووا. دست‌ساز در تبریز.</p>
     </div>
   </footer>
   <script src="script.js"></script>
